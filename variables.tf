@@ -91,10 +91,8 @@ variable "dhcp_server2_floating_ip" {
     description = "The dhcp server2 instance floating ip"
     default  = "dhcp_server2_floating_ip"
 }
-#provider "openstack" {
-#  user_name = "${var.openstack_user_name}"
-#  tenant_name = "${var.openstack_tenant_name}"
-#  password  = "${var.openstack_password}"
-#  auth_url  = "${var.openstack_auth_url}"
-#  region    = "${var.openstack_region}"
-#}
+
+variable "external_dns_server" {
+   description = "Extenal DNS servers to use on management subnet"
+   default = ["1.1.1.1"]
+}
